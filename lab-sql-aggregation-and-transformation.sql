@@ -6,9 +6,7 @@ FROM sakila.film;
 -- 1.2
 SELECT ROUND(AVG(length),2)
 FROM sakila.film;
-SELECT SEC_TO_TIME(ROUND(AVG(length)))
-FROM sakila.film;
-SELECT *, CONVERT((length,date), '%k-%i')
+SELECT SEC_TO_TIME(ROUND(AVG(length))*60)
 FROM sakila.film;
 -- 2.1
 SELECT DATEDIFF(MAX(rental_date), MIN(rental_date))
